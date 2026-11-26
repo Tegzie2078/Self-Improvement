@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>On Track</title>
+  <meta name="theme-color" content="#0f766e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="On Track">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="login" class="login hidden">
+    <form id="login-form" class="card">
+      <img src="/icons/icon-192.png" alt="" width="72" height="72">
+      <h1>On Track</h1>
+      <label>Password<input type="password" id="login-pw" autocomplete="current-password" required></label>
+      <button class="btn primary" type="submit">Log in</button>
+      <p id="login-err" class="err"></p>
+    </form>
+  </div>
+
+  <header class="top">
+    <h1 id="title">Today</h1>
+    <span id="sync" class="sync" title="Sync status"></span>
+  </header>
+
+  <main id="view" class="view"></main>
+
+  <nav class="tabs" id="tabs">
+    <button data-tab="today" class="active"><span>●</span>Today</button>
+    <button data-tab="quit"><span>📉</span>Cut down</button>
+    <button data-tab="train"><span>🏋</span>Train</button>
+    <button data-tab="checkin"><span>✓</span>Daily</button>
+    <button data-tab="graphs"><span>📈</span>Graphs</button>
+  </nav>
+
+  <dialog id="modal"><div id="modal-body"></div></dialog>
+  <div id="toast" class="toast"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
